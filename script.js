@@ -127,7 +127,7 @@ document.getElementById('transForm').addEventListener('submit', async (e) => {
         alert("Tahap 1: Berhasil dicatat di Supporting Layer. Memulai Verifikasi Blockchain...");
         
         // 2. Panggil Node.js untuk Verifikasi Blockchain (Blockchain Layer)
-        const response = await fetch('http://localhost:5000/api/verify-blockchain', {
+        const response = await fetch('https://experimental-duck-pratama-c4294837.koyeb.app/api/verify-blockchain', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newTx[0])
@@ -203,4 +203,5 @@ confirmPay.addEventListener('click', async () => {
         paymentModal.classList.add('hidden');
         switchToDashboard(); // Pindah ke dashboard
     }
+
 });
